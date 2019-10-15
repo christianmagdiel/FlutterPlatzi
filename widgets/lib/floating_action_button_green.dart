@@ -6,7 +6,6 @@ class FloatingActionButtonGreen extends StatefulWidget{
     // TODO: implement createState
     return _FloatingActionButtonGreen();
   }
-
 }
 
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen>{

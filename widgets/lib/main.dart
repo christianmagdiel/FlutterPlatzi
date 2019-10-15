@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:widgets/review_list.dart';
-
-import 'description_place.dart';
-import 'header_appbar.dart';
+import 'package:widgets/platzi_trips.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -31,26 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Softwee"),
-        ),
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace("Navolato",
-                    4,
-                    "Navolato es una ciudad del estado de Sinaloa, es cabecera del municipio de Navolato. "
-                        "Cuenta con 28 676 habitantes. Navolato pertenece a la Zona Centro del Estado, "
-                        "la cual está integrada por los municipios de Culiacán, Salvador Alvarado, Angostura, Mocorito y Badiraguato. "),
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-        ),
-      ),
+      home: PlatziTrips(),
     );
   }
 }
