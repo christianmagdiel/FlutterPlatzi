@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ButtonMessage extends StatelessWidget {
 
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -9,7 +10,7 @@ class ButtonMessage extends StatelessWidget {
       onTap: (){
         Scaffold.of(context).showSnackBar(
             SnackBar(
-              content: Text("Enviar mensaje"),
+              content: Text("Mensaje"),
             )
         );
       },
