@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'header_profile.dart';
+
 class ProfileTrips extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      color: Colors.indigo,
+    return Stack(
+      children: <Widget>[
+        HeaderProfile("Profile")
+      ],
     );
   }
 

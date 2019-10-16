@@ -9,7 +9,7 @@ class FloatingActionButtonGreen extends StatefulWidget{
 }
 
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen>{
-  bool isFavorite = true;
+  bool isFavorite = false;
   IconData buttonIcon = Icons.favorite_border;
   String mensaje;
   void onPressedFav(){
