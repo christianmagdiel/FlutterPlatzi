@@ -8,13 +8,11 @@ class CardProfile extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
 
-
-    final card = Center(
-      child: Container(
-        height: 210.0,
-        width: 350.0,
+    final card = Container(
+        height: 240.0,
         margin: EdgeInsets.only(
-            top: 210.0,
+          left: 13.0,
+          right: 13.0
         ),
         decoration: BoxDecoration(
             image: DecorationImage(
@@ -31,79 +29,110 @@ class CardProfile extends StatelessWidget{
               )
             ]
         ),
-      ),
-    );
+      );
 
-    final description = Container(
+    final cardText = Container(
+      //alignment: Alignment(0.8, 1.2),
+      width: 290.0,
+      height: 110.0,
       margin: EdgeInsets.only(
-          top: 20.0,
-          left: 20.0,
-          right: 20.0
+        left: 13.0,
+        right: 13.0,
       ),
-      child: new Text(
-        "asdas",
-        style: const TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF56575a)
-        ),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          shape: BoxShape.rectangle,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black38,
+                blurRadius: 15.0,
+                offset: Offset(0.0, 7.0)
+            )
+          ]
       ),
-    );
-
-    final textDescription = InkWell(
-      child: Container(
-          margin: EdgeInsets.only(
-              top: 0.0,
-              left: 20.0,
-              right: 20.0
-          ),
-          height: 95.0,
-          width: 250.0,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              gradient: LinearGradient(
-                  colors: [
-                    Colors.white,
-                    Colors.white
-                  ],
-                  begin: FractionalOffset(0.2, 0.0),
-                  end: FractionalOffset(1.0, 0.6),
-                  stops: [0.0, 0.6],
-                  tileMode: TileMode.clamp
-              ),
-              boxShadow: <BoxShadow> [
-                BoxShadow (
-                    color: Colors.black38,
-                    blurRadius: 15.0,
-                    offset: Offset(0.0, 7.0)
-                )
-              ]
-          ),
-      )
-    );
-
-    final Cuadro = Container(
-      height: 290.0,
-      child: Stack(
-        alignment: Alignment(0.0, -1.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          card,
           Container(
-            alignment: Alignment(0.0, 0.8),
-            child: textDescription,
+            padding: EdgeInsets.only(
+                top: 15.0,
+                left: 15.0
+            ),
+            child: Text(
+              "amazing place",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: "Lato",
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ),
           Container(
-            alignment: Alignment(0.5, 1.0),
-            child: FloatingActionButtonGreen(),
+            padding: EdgeInsets.only(
+                top: 5.0,
+                left: 15.0
+            ),
+            child: Text(
+              "excellent",
+              style: TextStyle(
+                color: Colors.black45,
+                fontFamily: "Lato",
+                fontSize: 13.0,
+
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+                left: 15.0
+            ),
+            child: Text(
+              "photography",
+              style: TextStyle(
+                  color: Colors.black45,
+                  fontFamily: "Lato",
+                  fontSize: 13.0
+              ),
+            ),
+          ),
+          Container(
+            padding:EdgeInsets.only(
+                top: 5.0,
+                left: 15.0
+            ) ,
+            child: Text(
+              "steps 12.123.125",
+              style: TextStyle(
+                  color: Color.fromRGBO(210, 159, 104, 1),
+                  fontFamily: "Lato",
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ),
         ],
       ),
     );
 
-    return Stack(
-      children: <Widget>[
-        Cuadro,
-      ],
+    return  Stack(
+        alignment: Alignment(0.0, 1.25),
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(
+
+            ),
+            child: card,
+          ),
+          cardText,
+          Container(
+            margin: EdgeInsets.only(
+              left: 20.0,
+            ),
+            alignment: Alignment(0.7, 1.0),
+            child: FloatingActionButtonGreen(),
+          ),
+        ],
     );
   }
 
